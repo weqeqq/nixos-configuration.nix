@@ -9,6 +9,7 @@
 	];
 	home = "/home/weqeq";
         isNormalUser = true;
+	shell = pkgs.fish;
       };
     };
   };
