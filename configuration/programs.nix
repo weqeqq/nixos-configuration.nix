@@ -28,5 +28,8 @@
     fish = { 
       enable = true;
     };
+    neovim = {
+      enable = true;
+    };
   };
 }
