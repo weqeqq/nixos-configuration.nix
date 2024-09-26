@@ -1,0 +1,5 @@
+{ ... } @nixArgs: {
+  pulseaudio = {
+    enable = false;
+  };
+}

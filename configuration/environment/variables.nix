@@ -1,5 +1,5 @@
-{ ... } @args: {
-  variables = builtins.trace "Confiugring system variables." {
+{ ... } @nixArgs: {
+  variables = {
     GDK_BACKEND     = "wayland,x11,*";
     QT_QPA_PLATFORM = "wayland,xcb";
     SDL_VIDEODRIVER = "wayland";

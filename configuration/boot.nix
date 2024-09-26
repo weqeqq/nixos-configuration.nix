@@ -1,4 +1,5 @@
-{ ... } @args: {
-  boot = import boot/loader.nix args;
+{ ... } @nixArgs: {
+  boot = with builtins;
+    trace "bootMsg: Configuring loader." (import boot/loader.nix nixArgs);
 }
 

@@ -1,35 +1,8 @@
-{ pkgs, ... }:
-{
-  programs = {
-    hyprland = {
-      enable = true;
-    };
-    gamescope = {
-      enable = true;
-    };
-    steam = {
-      gamescopeSession = {
-        enable = true;
-      };
-      enable = true;
-    };
-    git = {
-      enable = true;
-      config = {
-        user = {
-	  email = "ggmodwear@gmail.com";
-	  name  = "weqeq";
-	};
-      };
-    };
-    fish = { 
-      enable = true;
-    };
-    ssh = {
-      startAgent = true;
-    };
-    neovim = {
-      enable = true;
-    };
-  };
+{ pkgs, ... } @nixArgs: {
+  programs = with builtins;
+    trace "programsMsg: Configuring git."      (import ./programs/git.nix      nixArgs) // 
+    trace "programsMsg: Configuring ssh."      (import ./programs/ssh.nix      nixArgs) // 
+    trace "programsMsg: Configuring fish."     (import ./programs/fish.nix     nixArgs) // 
+    trace "programsMsg: Configuring neovim."   (import ./programs/neovim.nix   nixArgs) // 
+    trace "programsMsg: Configuring hyprland." (import ./programs/hyprland.nix nixArgs);
 }

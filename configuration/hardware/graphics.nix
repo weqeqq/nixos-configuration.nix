@@ -1,0 +1,5 @@
+{ ... } @nixArgs: {
+  graphics = {
+    enable = true;
+  };
+}

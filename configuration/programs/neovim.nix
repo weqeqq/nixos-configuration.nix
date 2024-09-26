@@ -1,0 +1,5 @@
+{ ... } @nixArgs: {
+  neovim = {
+    enable = true;
+  };
+}

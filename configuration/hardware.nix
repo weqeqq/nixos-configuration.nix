@@ -1,23 +1,7 @@
-{ config, ... }:
-{
-  hardware = {
-    nvidia = {
-      modesetting = {
-        enable = true;
-      };
-      powerManagement = {
-        enable      = false;
-        finegrained = false;
-      };
-      open                         = false;
-      package                      = config.boot.kernelPackages.nvidiaPackages.stable;
-      nvidiaSettings               = true;
-      forceFullCompositionPipeline = true;
-    };
-    pulseaudio = {
-      enable = false;
-    };
-    graphics.enable = true;
-  };
+{ ... } @nixArgs: {
+  hardware = with builtins; 
+    trace "hardwareMsg: Configuring nvidia."     (import ./hardware/nvidia.nix     nixArgs) // 
+    trace "hardwareMsg: Configuring graphics."   (import ./hardware/graphics.nix   nixArgs) //
+    trace "hardwareMsg: Configuring pulseaudio." (import ./hardware/pulseaudio.nix nixArgs);
 }
 

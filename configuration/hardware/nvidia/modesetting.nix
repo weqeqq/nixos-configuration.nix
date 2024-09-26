@@ -1,0 +1,5 @@
+{ ... } @nixArgs: {
+  modesetting = {
+    enable = true;
+  };
+}

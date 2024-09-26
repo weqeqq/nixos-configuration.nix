@@ -1,8 +1,5 @@
-{ pkgs, ... } @args: { 
-  environment = import ./environment/variables.nix args // {
-  systemPackages = [
-    pkgs.minecraft-server
-  ];
-  };
+{ ... } @nixArgs: { 
+  environment = with builtins;
+    trace "environmentMsg: Configuring variables." (import ./environment/variables.nix nixArgs);
 }
 
