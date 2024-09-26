@@ -1,0 +1,5 @@
+{ ... } @args: {
+  efi = {
+    canTouchEfiVariables = true;
+  };
+}
