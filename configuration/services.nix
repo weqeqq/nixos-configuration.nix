@@ -14,7 +14,17 @@
       enable = true;
     };
     pipewire = {
-      enable = false;
+      enable = true;
+      alsa = {
+        enable       = true;
+	support32Bit = true;
+      };
+      pulse = {
+        enable = true;
+      };
+      wireplumber = {
+        enable = true;
+      };
     };
     openssh = {
       enable = true;

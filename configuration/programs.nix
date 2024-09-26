@@ -2,9 +2,6 @@
 {
   programs = {
     hyprland = {
-      xwayland = {
-        enable = true;
-      };
       enable = true;
     };
     gamescope = {
@@ -27,6 +24,9 @@
     };
     fish = { 
       enable = true;
+    };
+    ssh = {
+      startAgent = true;
     };
     neovim = {
       enable = true;

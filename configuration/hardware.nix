@@ -15,8 +15,7 @@
       forceFullCompositionPipeline = true;
     };
     pulseaudio = {
-      enable = true;
-      support32Bit = true;
+      enable = false;
     };
     graphics.enable = true;
   };

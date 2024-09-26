@@ -5,11 +5,10 @@
       weqeq = {
 	extraGroups = [
 	  "wheel"
-	  "networkmanager"
 	];
-	home = "/home/weqeq";
+	home         = "/home/weqeq";
         isNormalUser = true;
-	shell = pkgs.fish;
+	shell        = pkgs.fish;
       };
     };
   };
