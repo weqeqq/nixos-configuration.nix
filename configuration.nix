@@ -13,5 +13,8 @@
       ./configuration/hardware-configuration.nix
     ];
   system.stateVersion = "24.05";
+  security.sudo.extraConfig = ''
+    Defaults env_keep += "SSH_AUTH_SOCK"
+  '';
 }
 
