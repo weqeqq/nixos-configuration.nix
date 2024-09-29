@@ -1,6 +1,13 @@
 { ... }:
 {
   services = {
+    ollama = {
+      enable = true;
+      loadModels = [
+        "mistral"
+      ];
+      acceleration = "cuda";
+    };
     xserver = {
       videoDrivers = [
         "nvidia"
