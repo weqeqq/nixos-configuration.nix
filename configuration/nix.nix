@@ -1,11 +1,3 @@
-{ ... }:
-{
-  nix = {
-    settings = {
-      experimental-features = [
-        "nix-command"
-	"flakes"
-      ];
-    };
-  };
+{ ... } @nixArgs: {
+  nix = (import ./nix/settings.nix nixArgs);
 }
