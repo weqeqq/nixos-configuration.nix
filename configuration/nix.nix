@@ -1,3 +1,6 @@
 { ... } @nixArgs: {
-  nix = (import ./nix/settings.nix nixArgs);
+  nix = {
+    channel.enable = false;
+  } 
+  // (import ./nix/settings.nix nixArgs);
 }
