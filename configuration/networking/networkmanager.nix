@@ -1,4 +1,4 @@
-{ ... } @nixArgs: {
+{ ... }: {
   networkmanager = {
     enable = true;
   };
