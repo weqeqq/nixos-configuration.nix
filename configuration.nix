@@ -1,10 +1,12 @@
-{ config, lib, pkgs, ... }: {
+{ ... }: {
   imports = [ 
       ./configuration/nix.nix
       ./configuration/boot.nix
       ./configuration/time.nix
       ./configuration/users.nix
+      ./configuration/system.nix
       ./configuration/nixpkgs.nix
+      ./configuration/security.nix
       ./configuration/programs.nix
       ./configuration/services.nix
       ./configuration/hardware.nix
@@ -12,9 +14,5 @@
       ./configuration/environment.nix
       ./configuration/hardware-configuration.nix
     ];
-  system.stateVersion = "24.05";
-  security.sudo.extraConfig = ''
-    Defaults env_keep += "SSH_AUTH_SOCK"
-  '';
 }
 

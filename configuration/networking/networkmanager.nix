@@ -1,5 +1,0 @@
-{ ... }: {
-  networkmanager = {
-    enable = true;
-  };
-}

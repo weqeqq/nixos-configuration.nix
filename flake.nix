@@ -2,9 +2,7 @@
   description = "Description";
 
   inputs = {
-    nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs = { nixpkgs, ... } @inputs: {
@@ -12,11 +10,11 @@
       onafiel = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
-	  inherit inputs;
-	};
-	modules = [
-	  ./configuration.nix
-	];
+	        inherit inputs;
+	      };
+	      modules = [
+	        ./configuration.nix
+	      ];
       };
     };
   };

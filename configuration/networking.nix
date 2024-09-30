@@ -1,6 +1,6 @@
-{ ... } @nixArgs: {
-  networking = 
-    (import ./networking/networkmanager.nix nixArgs) // {
+{ ... }: {
+  networking = {
+    networkmanager.enable = true;
     hostName = "onafiel";
   };
 }

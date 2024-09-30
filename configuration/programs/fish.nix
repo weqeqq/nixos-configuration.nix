@@ -1,5 +1,0 @@
-{ ... } @nixArgs: {
-  fish = {
-    enable = true;
-  };
-}

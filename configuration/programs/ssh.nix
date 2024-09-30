@@ -1,5 +1,0 @@
-{ ... } @nixArgs: {
-  ssh = {
-    startAgent = true;
-  };
-}

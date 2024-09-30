@@ -1,15 +1,8 @@
-{ pkgs, ... }:
-{
-  users = {
-    users = {
-      weqeq = {
-	extraGroups = [
-	  "wheel"
-	];
-	home         = "/home/weqeq";
-        isNormalUser = true;
-	shell        = pkgs.fish;
-      };
-    };
+{ pkgs, ... }: {
+  users.users.weqeq = {
+    home = "/home/weqeq";
+    shell = pkgs.fish;
+    extraGroups = [ "wheel" ];
+    isNormalUser = true;
   };
 }

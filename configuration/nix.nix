@@ -1,6 +1,6 @@
-{ ... } @nixArgs: {
+{ ... }: {
   nix = {
     channel.enable = false;
-  } 
-  // (import ./nix/settings.nix nixArgs);
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  }; 
 }

@@ -1,5 +1,0 @@
-{ ... } @nixArgs: {
-  hyprland = {
-    enable = true;
-  };
-}

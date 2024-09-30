@@ -1,5 +1,0 @@
-{ ... }: {
-  pulseaudio = {
-    enable = false;
-  };
-}

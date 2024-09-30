@@ -1,5 +1,0 @@
-{ ... }: {
-  graphics = {
-    enable = true;
-  };
-}
