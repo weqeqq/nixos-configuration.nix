@@ -1,5 +1,11 @@
-{ ... } @nixArgs: {
-  boot = with builtins;
-    trace "bootMsg: Configuring loader." (import boot/loader.nix nixArgs);
+{ ... }: {
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+    };
+    systemd-boot = {
+      enable = true;
+    };
+  };
 }
 
