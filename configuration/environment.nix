@@ -1,5 +1,5 @@
 { ... } @nixArgs: { 
-  environment = with builtins;
-    trace "environmentMsg: Configuring variables." (import ./environment/variables.nix nixArgs);
+  environment =
+    (import ./environment/variables.nix nixArgs);
 }
 
